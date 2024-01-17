@@ -3,8 +3,8 @@ Bulk update Public Access Models via the Alma API
 
 ## Installation/Configuration
 ### Installation
-1. Clone or download this repository to your machine.
-2. Install the python dependency modules
+1. Clone or download this repository to your machine. `git clone git@github.com:wc-library/alma-pam-tool.git` or click "Code" then "Download Zip"
+2. Install the python dependency modules `pip install -r requirements.txt` from inside the alma-pam-tool directory.
 
 ### Constant Configuration
 1. Set the `APIKEY` constant to an Ex Libris Developer API key with Electronic Resources read/write permision - unless you only need to use the `review` mode, in which case the read permission is sufficient.
