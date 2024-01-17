@@ -23,7 +23,7 @@ The tool allows for bulk review and updating of the public access models of a pa
 5. Set the code and the description for the Public Access Model that you want to change undefined or empty PAMs to use. This will only matter in the `update` mode. ***TODO:** check whether the code and description need to exist in an Alma table somewhere already*
 
 ### Running the tool
-Once the installation, the constants configuration, and the per run configuration are done, you can run the script by opening a terminal window and typing `python main.py`
+Once the installation, the constants configuration, and the per run configuration are done, you can run the script by opening a terminal window in the alma-pam-tool directory and typing `python main.py`
 
 The script will provide status updates as it runs. When it finishes it will also create a timestamped report file based on the mode as well as an error log file if any errors were encountered. 
 
