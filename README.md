@@ -20,7 +20,7 @@ The tool allows for bulk review and updating of the public access models of a pa
 2. Set your mode. Read more about each mode below.
 3. Set the collection ID for the collection that you'll be working with.
 4. Set the service ID for the collection that you'll be working with.
-5. Set the code and the description for the Public Access Model that you want to change undefined or empty PAMs to use. This will only matter in the `update` mode. ***TODO:** check whether the code and description need to exist in an Alma table somewhere already*
+5. Set the code and the description for the Public Access Model that you want to change undefined or empty PAMs to use. This will only matter in the `update` mode. These can be found in Alma in Configuration > Acquisitions > Licenses > Access Model
 
 ### Running the tool
 Once the installation, the constants configuration, and the per run configuration are done, you can run the script by opening a terminal window in the alma-pam-tool directory and typing `python main.py`
@@ -32,11 +32,20 @@ A cache file will also be created if one did not exist yet. This will help reduc
 The cache also keeps a record of the API requests that have been made and will remove those after midnight GMT when Ex Libris resets the daily threshold. These do not get cleared from the cache in the cache clearing modes since Ex Libris obviously will not have reset their count early. 
 
 ### Review Mode
-***TODO:** add explanation of the review mode and screenshots to illustrate*
+
+The review mode retrieves portfolio information from the API or the cache, pertaining to the collection ID, and reports their titles and public access models, in a log file sorted by the current PAM values. This is a useful first step in preparing to update the PAMs. 
+
 ### Update Mode
-***TODO:** add explanation of the update mode and screenshots to illustrate*
+
+The update mode retrieves portfolio information from the API or the cache for a particular collection ID and then update empty or undefined PAMs with the desired new PAM value in Alma. 
+
 ### Cache Clearing Modes
-***TODO:** add brief explanations of the cache clearing modes*
 - clear_cache_all
+  
+  Removes all cached data except for the API request count from the past 24 hours
 - clear_cache_collection
+  
+  Removes all cached data for a particular collection ID
 - clear_cache_portfolios
+  
+  Removes a particular portfolio from the cache by the portfolio's ID within the current collection ID. The script will prompt for the portfolio ID as it is running. 
