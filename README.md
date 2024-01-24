@@ -9,7 +9,10 @@ Bulk update Public Access Models via the Alma API
 ### Constant Configuration
 1. Set the `APIKEY` constant to an Ex Libris Developer API key with Electronic Resources read/write permision - unless you only need to use the `review` mode, in which case the read permission is sufficient.
 2. Update the `BASEURL` constant to match your Alma instance's API endpoint. Consult [https://developers.exlibrisgroup.com/alma/apis/](https://developers.exlibrisgroup.com/alma/apis/)
-3. Set the `MAX_API_CALLS_PER_DAY` constant to an integer that makes sense for your institution's API limits and existing usage. Check [https://developers.exlibrisgroup.com/manage/reports/](https://developers.exlibrisgroup.com/manage/reports/) to see your API Threshold and usage. 
+3. Set the `MAX_API_CALLS_PER_DAY` constant to an integer that makes sense for your institution's API limits and existing usage. Check [https://developers.exlibrisgroup.com/manage/reports/](https://developers.exlibrisgroup.com/manage/reports/) to see your API Threshold and usage.
+
+#### Example of configuration set-up:
+![configuration](https://github.com/wc-library/alma-pam-tool/assets/64615625/a5947865-afe4-48e2-88d6-eb2d6973e2c5)
 
 ## Usage
 
