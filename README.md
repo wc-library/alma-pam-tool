@@ -25,7 +25,13 @@ The tool allows for bulk review and updating of the public access models of a pa
 ### Running the tool
 Once the installation, the constants configuration, and the per run configuration are done, you can run the script by opening a terminal window in the alma-pam-tool directory and typing `python main.py`
 
+![alma-pam-tool_1](https://github.com/wc-library/alma-pam-tool/assets/64615625/c6686e30-4efc-4c73-9f9a-eac6635489b7)
+
 The script will provide status updates as it runs. When it finishes it will also create a timestamped report file based on the mode as well as an error log file if any errors were encountered. 
+
+#### Examples of program progress:
+![alma-pam-tool_2](https://github.com/wc-library/alma-pam-tool/assets/64615625/13a3abfd-ed26-4d69-a904-c66f7405f08b)
+![alma-pam-tool_3](https://github.com/wc-library/alma-pam-tool/assets/64615625/a47c374b-580b-4c22-9934-594f2f751ae5)
 
 A cache file will also be created if one did not exist yet. This will help reduce unnecessary API requests. By default the cache data will expire for a particular item after one week. You may use one of the cache clearing modes if you wish to immediately fetch the portfolio/collection information again. 
 
@@ -34,6 +40,9 @@ The cache also keeps a record of the API requests that have been made and will r
 ### Review Mode
 
 The review mode retrieves portfolio information from the API or the cache, pertaining to the collection ID, and reports their titles and public access models, in a log file sorted by the current PAM values. This is a useful first step in preparing to update the PAMs. 
+
+#### Review mode log example:
+![alma-pam-tool_4](https://github.com/wc-library/alma-pam-tool/assets/64615625/e19e683e-09d4-4967-afec-812165ebf55c)
 
 ### Update Mode
 
