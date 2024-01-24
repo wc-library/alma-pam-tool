@@ -36,6 +36,9 @@ The script will provide status updates as it runs. When it finishes it will also
 ![alma-pam-tool_2](https://github.com/wc-library/alma-pam-tool/assets/64615625/13a3abfd-ed26-4d69-a904-c66f7405f08b)
 ![alma-pam-tool_3](https://github.com/wc-library/alma-pam-tool/assets/64615625/a47c374b-580b-4c22-9934-594f2f751ae5)
 
+> [!NOTE]
+> The numbers and percentages that appear on the left-hand side of each of the progress lines is out of order because the program runs asynchronously. These percentages more accurately reflect progress with larger collections.
+
 A cache file will also be created if one did not exist yet. This will help reduce unnecessary API requests. By default the cache data will expire for a particular item after one week. You may use one of the cache clearing modes if you wish to immediately fetch the portfolio/collection information again. 
 
 The cache also keeps a record of the API requests that have been made and will remove those after midnight GMT when Ex Libris resets the daily threshold. These do not get cleared from the cache in the cache clearing modes since Ex Libris obviously will not have reset their count early. 
